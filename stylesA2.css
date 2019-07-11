@@ -1,0 +1,283 @@
+/*
+    -------------- COLOURS ----------------------
+
+BLACK HAZE
+Light shades
+Use this color as the background for your dark-on-light designs, or the text color of an inverted design.
+#F8F9F9
+
+EMPRESS
+Light accent
+Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
+#7B7375
+
+GRANNY SMITH
+Main brand color
+This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity.
+#7D9598
+
+SCORPION
+Dark accent
+Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
+#6D5E67
+
+PLANTATION
+Dark shades
+Use as the text color for dark-on-light designs, or as the background for inverted designs.
+#264049
+*/
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    border: 2px solid  #264049;
+    background: #264049;
+    color: #F8F9F9;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background: #F8F9F9;
+    color: #264049;
+}
+
+body {
+    background: #264049;
+}
+
+p {
+    color: #F8F9F9;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    transition: all 1s linear;
+    transition-timing-function: ease;
+}
+
+/*Disable highlighting*/
+* {
+    user-select: none;
+    font-family: "quicksandregular";
+}
+
+.empty {
+    z-index: -1;
+    display: none;
+}
+
+h1, h2 {
+    color: #F8F9F9;
+}
+
+.statsDisplay {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    top: -60px;
+}
+.statsDisplay div {
+    display: inline-table;
+    height: 50%;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    color: #264049;
+    font-weight: bold;
+}
+
+.screenDiv .menuWrapper img {
+    width: 30%;
+}
+
+.screenDiv {
+    margin: auto;
+    text-align: center;
+    background: #7D9598;
+    height: 650px;
+    width: 650px;
+    max-height: 70vh;
+    max-width: 70vh;
+    padding-bottom: 26vh;
+    padding-top: 8vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.screenDiv .selectSliderWrapper {
+    position: fixed;
+    width: 75%;
+    height: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.selectSliderWrapper div {
+    height: 450px;
+    width: 450px;
+    margin: auto;
+}
+
+.screenDiv .selectSliderWrapper img, .sliderTypeDiv, .sliderTypeDivRight {
+    width: 31%;
+    height: 31%;
+    display: inline-block;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    border: 2px solid  #264049;
+    position: relative;
+}
+
+.screenDiv .selectSliderWrapper img:hover {
+    opacity: 0.4;
+    transition: 0.1s;
+}
+
+.sliderTypeDiv, .sliderTypeDivRight {
+    vertical-align: bottom;
+}
+
+.sliderTypeDivRight {
+    margin-left: 35px;
+}
+
+.screenDiv .menuWrapper {
+    position: fixed;
+    width: 45%;
+    height: 40%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.menuWrapper {
+    background: #7B7375;
+}
+
+.screenDiv .grid {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 18px solid #F8F9F9;
+    border-radius: 10px;
+    background-color: #F8F9F9;
+    top: -10%;
+}
+.screenDiv .grid .cell {
+    position: absolute;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    transition-timing-function: ease;
+    border: 3px solid white;
+}
+
+.screenDiv .grid .correct {
+    border: 3px solid green;
+}
+
+.screenDiv .grid .wrong {
+    border: 3px solid red;
+}
+
+.screenDiv .grid .complete {
+    border: none;
+    border-radius: 0;
+    position: static;
+    transition: all 1s linear;
+    transition-timing-function: ease;
+}
+
+.screenDiv .completeGrid {
+    padding-top:15px;
+}
+
+/* Media queries for phone/smaller screens */
+@media only screen and (max-width: 650px) {
+    .screenDiv {
+        width: 90vw;
+        height: 90vw;
+        max-height: 100%;
+        margin-top: 5%;
+        padding-bottom: 34vh;
+        padding-top: 10vh
+    }
+    .bestScreen {
+        padding-bottom: 43vh;
+        padding-top: 1vh;
+    }
+    .screenDiv .menuWrapper {
+        width: 80%;
+        height: 70%;
+        top: 10%;
+    }
+    .screenDiv .selectSliderWrapper {
+        width: 80%;
+        height: 70%;
+        top: 10%;
+    }
+    .screenDiv .grid {
+        border-width: 10px;
+    }
+    .screenDiv .grid .cell, .wrong, .corrent {
+        border-width: 1.5px;
+    }
+    .sliderTypeDiv, .sliderTypeDivRight {
+        width: 46%;
+        font-size: 12px;
+    }
+    .screenDiv .selectSliderWrapper img {
+        width: 44%;
+        height: auto;
+    }
+    .sliderTypeDivRight {
+        margin-left: 15px;
+    }
+    .selectSliderWrapper div {
+        width: 75%;
+        height: 65%;
+    }
+    .statsDisplay {
+        height: 40px;
+    }
+    .statsDisplay div {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .statsDisplay {
+        top: -50px;
+    }
+}
+
+/* Media queries for landscape tablets*/
+@media only screen and (orientation: landscape) and (max-height: 800px) {
+    .screenDiv {
+        height: 450px;
+        width: 450px;
+    }
+    .ingameButton {
+        position: relative;
+        top: -10%;
+    }
+}

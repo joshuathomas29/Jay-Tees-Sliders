@@ -1,0 +1,107 @@
+9/8 ----
+Set up basic menus including difficulty settings which will determine if the picture/number slider is a 3x3 or a 4x4 puzzle
+
+24/8 ----
+Started test slider puzzle
+implemented grid for easy puzzles (3x3)
+I am way behind schedule of where I'd like to be
+
+25/8 ----
+successfully populated a 3x3 grid with data from sliderList array
+last box still showing "undefined" and messes up positioning if I set to null.
+Still behind schedule by about a week. Will need to dedicated more time during the next few weeks.
+
+26/8 ----
+Reformatted slider board code as I had a redundant for loop I didn't notice.
+Looking for more efficient ways to build slider
+
+27/8 ----
+researched "this dot" and changed my entire slider code
+created classes with constructors to make sliders
+successfully created slider puzzle using static array of colours
+slider has keydown events - will look to change to onclick and ontouch events later
+attempted to populate slider from data files, unsuccessful
+
+30/8 ----
+implemented passing data from separate file into puzzle - will add as parameter later and test if still works
+in progress of assigning onclick on individual cells on the player board
+onclick working for x direction only so far
+
+1/9 ----
+pretty much wiped entire code, started again as my code was turning to spaghetti
+implemented slider again with number as text
+gave divs onclick successfully to move the elements around the slider
+
+2/9 ----
+made a number grid image and spliced it into 9 180x180 images
+tested adding all 9 images into divs on sliderboard -- successful
+TODO - add onlick to the images to make them work the same as the boxes work right now with text
+- finally implement loading game conditions based on difficulty user has selected
+- add more images and start testing win conditions
+- fix menu buttons and styling etc
+
+4/9 ----
+changed images to resize based on gridMultiplier so I can reuse images for both difficulties
+onclick added to images, now swap with the empty cell
+empty cell changed to hidden to look nicer
+added transition times so pieces "animate"
+linked the headings through to creating a slider game
+game loaded changes based on difficulty selected
+added win condition, working
+TODO - image sizing needs fine tuning to fit inside box nicely for 3x3 AND 4x4
+- source more images to start adding to the game
+- splice all images to 3x3 and 4x4s
+- add images to data sets
+- start planning "hard difficulty game"
+- add visual feedback after game is won.
+
+6/9 ----
+Implemented colour theory to most aspects of UI
+Added second image to test if all functions worked with any picture - successful
+Image sizing complete, looks very good on large monitors and smaller screens.
+TODO - Still get more images
+- Link new menu buttons to different pages
+- Media queries for all UI besides the slider
+
+7/9 ----
+Refined colour theory
+Added all images, spliced into 3x3 and 4x4 and added to data array
+Menus updated
+Timer and move counter added
+Correct and incorrect tile position feedback added
+Refined shuffle - added interval to visualize shuffling
+Implemented full puzzle forming on win
+Win screen shows time taken and moves taken
+TODO - Hard Mode
+
+FIRST BUILD COMPLETE
+8/9 ----
+Hard Mode started
+Target numbers are still moving during shuffle
+Added check to remove possibility of target number moving
+Target numbers do not get onclick listeners
+Hard Mode completed and tested - Working, extremely difficult as intended
+TODO - "Best Score" display - most likely for any puzzle, not each puzzle, but for each difficulty
+- add best score on puzzle screen for something to beat
+
+9/9 ----
+Player stats added, best score and time displayed AFTER first game is beat
+Best time and moves taken relate to the difficulty the user is playing
+Added background music (toggleable) and tap sounds for tile clicks
+Added option to play Random slider
+Added option to Replay same slider
+Disabled tile placement feedback in hard mode
+Disabled visualizing shuffle in hard mode as user could see the completed puzzle for a moment.
+TODO - Finalize styling, mostly colours. Some boxes are a bit out of proportion though.
+
+13/9 ----
+Changed sizing marginally
+Added extra information to hard mode
+Testing game mechanics thoroughly - no bugs
+Game mechanics completed and fully tested.
+Tested views for all mobiles in portrait, and tablet for portrait and landscape, all looking good.
+TODO - Touch up styling up until submission date.
+
+16/9 ----
+Touched up some styling on mobile displays.
+TODO - Video demonstration of features
