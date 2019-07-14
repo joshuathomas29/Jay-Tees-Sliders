@@ -108,7 +108,7 @@ function gameBoard(puzzle) {
 function fillBoard (puzzleToLoad, puzzleContainer, gridSize) {
     //add sound for when user clicks a tile
     var tileClickedSound = new Audio("sounds/tap.mp3");
-    tileClickedSound.volume = 0.55;
+    tileClickedSound.volume = 0.54;
     //general counter to go through array
     var counter = 0;
     //two loops to create the grid and assign x and y co-ordinate positions to created elements
